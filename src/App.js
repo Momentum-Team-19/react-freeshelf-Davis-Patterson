@@ -1,13 +1,19 @@
-import './App.css'
-import bookData from './book-data.json'
+import './App.css';
+import bookData from './book-data.json';
 
 function App() {
   return (
     <div>
       <h1>Freeshelf</h1>
-      {/* Use bookData to show books on the page*/}
+      {bookData.map((book) => (
+        <p>{book.title}</p>
+      ))}
     </div>
-  )
+  );
 }
 
-export default App
+function Book(book) {
+  return <p>{book['title']}</p>;
+}
+
+export default App;
