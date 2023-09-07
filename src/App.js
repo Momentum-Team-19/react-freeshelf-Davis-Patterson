@@ -42,7 +42,7 @@ function App() {
                   {activeBook === index && showMore && (
                     <>
                       <div className="bookUrl">
-                        <strong>URL:</strong> {book.url}
+                        <strong>URL:</strong> <a href={book.url}>{book.url}</a>
                       </div>
                       <div className="bookPub">
                         <strong>Publisher:</strong> {book.publisher}
